@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic);
 /*!
  *  Font Awesome 4.6.3 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -2089,6 +2090,7 @@
   box-sizing: border-box; }
 
 body {
+  font-family: "Open Sans", sans-serif;
   font-size: 14px;
   margin: 0;
   padding: 0; }
@@ -2105,36 +2107,39 @@ body > header *, body > footer * {
   color: #fff; }
 body > header h1, body > footer h1 {
   font-size: 2em; }
+body > header h1 a, body > footer h1 a {
+  text-decoration: none; }
 body > header nav ul, body > footer nav ul {
   list-style: none;
   margin: 0;
   padding: 0; }
 body > header nav ul li, body > footer nav ul li {
   display: inline-block; }
-body > main .wrapper > nav {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  padding-left: 10px;
-  padding-right: 10px;
-  width: 20%;
-  float: left; }
-body > main .wrapper > div:first-child:not(:last-child), body > main .wrapper > div:last-child:not(:first-child) {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  padding-left: 10px;
-  padding-right: 10px;
-  width: 80%;
-  float: left; }
-body > main .wrapper > div:not(:first-child):not(:last-child) {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  padding-left: 10px;
-  padding-right: 10px;
-  width: 60%;
-  float: left; }
+@media (min-width: 767px) {
+  body > main .wrapper > nav {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 20%;
+    float: left; }
+  body > main .wrapper > div:first-child:not(:last-child), body > main .wrapper > div:last-child:not(:first-child) {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 80%;
+    float: left; }
+  body > main .wrapper > div:not(:first-child):not(:last-child) {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 60%;
+    float: left; } }
 
 form {
   margin: 0 0 20px 0; }

@@ -1,6 +1,10 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic); // Included here because to be near to the settings below
+
 $colorBackgroundButton:#ccc;
 $colorBackgroundButtonHover:lighten($colorBackgroundButton, 10%);
 $colorBackgroundHeader: #000;
 $colorBorder: #d0d0d0;
 $colorBorderFieldset: $colorBorder;
 $colorFontHeader: #fff;
+
+$fontMain: 'Open Sans', sans-serif;
