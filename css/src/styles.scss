@@ -7,19 +7,54 @@
 }
 body{
     font-size:14px;
-}
-header{
-    background:$colorBackgroundHeader;
-    color:$colorFontHeader;
-    font-size:2em;
-    padding:$gutter-width/2;
-    *{
+    margin:0;
+    padding:0;
+    &>header, &>main, &>footer{    
+        @include clear();
+    }
+    &>header{
+        background:$colorBackgroundHeader;
         color:$colorFontHeader;
+        padding:$gutter-width/2;
+        *{
+            color:$colorFontHeader;
+        }
+        h1{
+            font-size:2em;
+        }
+        nav{
+            ul{
+                list-style:none;
+                margin:0;
+                padding:0;
+                li{
+                    display:inline-block;
+                }
+            }
+        }
+    }
+    &>main{
+        .wrapper{
+            &>nav{
+                @include grid(1/5);
+            }
+            &>div{
+                &:first-child:not(:last-child), &:last-child:not(:first-child){
+                    // One sidebar         
+                    @include grid(4/5);   
+                }
+                &:not(:first-child):not(:last-child){
+                    // both sidebars
+                    @include grid(3/5);
+                }
+            }
+        }
+    }
+    &>footer{
+        @extend header;
     }
 }
-footer{
-    @extend header;
-}
+
 form{
     margin:0 0 $gutter-width 0;
     fieldset{
@@ -49,4 +84,9 @@ form{
             background:$colorBackgroundButtonHover;
         }
     }
+}
+
+.wrapper{
+    margin:0 auto;
+    max-width:1200px;
 }

@@ -18,7 +18,7 @@
         <% require themedCSS('styles') %>
         <link rel="shortcut icon" href="$ThemeDir/img/favicon.ico" />
     </head>
-    <body class="$ClassName<% if not $Menu(2) %> no-sidebar<% end_if %>" <% if $i18nScriptDirection %>dir="$i18nScriptDirection"<% end_if %>>
+    <body class="$ClassName" <% if $i18nScriptDirection %>dir="$i18nScriptDirection"<% end_if %>>
         <% include Header %>
         <main>
             <div class="wrapper">

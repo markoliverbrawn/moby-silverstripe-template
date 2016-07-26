@@ -2089,15 +2089,52 @@
   box-sizing: border-box; }
 
 body {
-  font-size: 14px; }
-
-header, footer {
+  font-size: 14px;
+  margin: 0;
+  padding: 0; }
+body > header:before, body > footer:before, body > header:after, body > footer:after, body > main:before, body > main:after, body > footer:before, body > footer:after {
+  content: "\0020";
+  display: table; }
+body > header:after, body > footer:after, body > main:after, body > footer:after {
+  clear: both; }
+body > header, body > footer {
   background: #000;
   color: #fff;
-  font-size: 2em;
   padding: 10px; }
-header *, footer * {
+body > header *, body > footer * {
   color: #fff; }
+body > header h1, body > footer h1 {
+  font-size: 2em; }
+body > header nav ul, body > footer nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+body > header nav ul li, body > footer nav ul li {
+  display: inline-block; }
+body > main .wrapper > nav {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 20%;
+  float: left; }
+body > main .wrapper > div:first-child:not(:last-child), body > main .wrapper > div:last-child:not(:first-child) {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 80%;
+  float: left; }
+body > main .wrapper > div:not(:first-child):not(:last-child) {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 60%;
+  float: left; }
 
 form {
   margin: 0 0 20px 0; }
@@ -2120,3 +2157,7 @@ form button {
   padding: 10px; }
 form button:hover {
   background: #e6e6e6; }
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1200px; }
