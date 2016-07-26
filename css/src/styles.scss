@@ -1,0 +1,51 @@
+@import "_variables";
+@import "salsa/salsa";
+
+*{
+    box-sizing: border-box;
+}
+body{
+    font-size:14px;
+}
+header{
+    background:$colorBackgroundHeader;
+    color:$colorFontHeader;
+    font-size:2em;
+    padding:$gutter-width/2;
+    *{
+        color:$colorFontHeader;
+    }
+}
+footer{
+    @extend header;
+}
+form{
+    margin:0 0 $gutter-width 0;
+    fieldset{
+        border:1px solid $colorBorderFieldset;
+        margin:$gutter-width 0;
+        padding:$gutter-width;
+        &>div{
+            &:not(.clear){
+                margin-top:$gutter-width;
+                &:first-of-type{
+                    margin-top:0;
+                }
+            }
+        }
+    }
+    input[type=text], input[type=email]{
+        display:block;
+        line-height:1em;
+        padding:$gutter-width/4;
+        width:100%;
+    }
+    button{
+        background:$colorBackgroundButton;
+        border:none;
+        padding:$gutter-width/2;
+        &:hover{
+            background:$colorBackgroundButtonHover;
+        }
+    }
+}
