@@ -28,6 +28,6 @@
         <% include Footer %>
         <% require javascript('framework/thirdparty/jquery/jquery.js') %>
         <%-- Please move: Theme javascript (below) should be moved to mysite/code/page.php  --%>
-        <script type="text/javascript" src="{$ThemeDir}/js/script.js"></script>
+        <script type="text/javascript" src="{$ThemeDir}/js/scripts.js"></script>
     </body>
 </html>

@@ -1,7 +1,10 @@
 @import "_variables";
 @import "_mixins";
-@import "salsa/salsa";
-@import "fa/scss/font-awesome"; 
+
+@import "vendor/salsa/salsa";
+@import "vendor/fa/scss/font-awesome";
+
+@import "_forms";
 
 *{
     box-sizing: border-box;
@@ -9,13 +12,14 @@
 body{
     font-family: $fontMain;
     font-size:14px;
+    line-height:$lineHeight;
     margin:0;
     padding:0;
     &>header, &>main, &>footer{    
         @include clear();
     }
     &>header{
-        background:$colorBackgroundHeader;
+        background:$colorBgHeader;
         color:$colorFontHeader;
         padding:$gutter-width/2;
         *{
@@ -61,36 +65,7 @@ body{
         @extend header;
     }
 }
-form{
-    margin:0 0 $gutter-width 0;
-    fieldset{
-        border:1px solid $colorBorderFieldset;
-        margin:$gutter-width 0;
-        padding:$gutter-width;
-        &>div{
-            &:not(.clear){
-                margin-top:$gutter-width;
-                &:first-of-type{
-                    margin-top:0;
-                }
-            }
-        }
-    }
-    input[type=text], input[type=email]{
-        display:block;
-        line-height:1em;
-        padding:$gutter-width/4;
-        width:100%;
-    }
-    button{
-        background:$colorBackgroundButton;
-        border:none;
-        padding:$gutter-width/2;
-        &:hover{
-            background:$colorBackgroundButtonHover;
-        }
-    }
-}
+
 .wrapper{
     margin:0 auto;
     max-width:1200px;

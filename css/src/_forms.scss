@@ -1,0 +1,67 @@
+form{
+    margin:0 0 $gutter-width 0;
+    fieldset{
+        border:1px solid $colorBorderFieldset;
+        margin:$gutter-width 0;
+        padding:$gutter-width;
+        &>div{
+            &:not(.clear){
+                margin-top:$gutter-width;
+                &:first-of-type{
+                    margin-top:0;
+                }
+            }
+        }
+    }
+    label{
+        display:block;
+    }
+    input, select, textarea{
+        font-family:$fontMain;
+    }
+    input[type=text], input[type=email], input[type=password], select, textarea{
+        border:1px solid $colorBorder;
+        border-radius:$borderRadius;
+        display:block;
+        padding:$gutter-width/2;
+        width:100%;
+    }
+    input[type=checkbox]{
+        display:none;
+        &+label{
+            @include unselectable();
+            line-height:2em;
+            &:before{
+                @extend .fa;
+                @extend .fa-2x;
+                @extend .fa-fw;
+                @extend .fa-square-o;
+                color:darken($colorBorder, 20%);
+                float:left;
+                margin-right:4px;
+            }
+        }
+        &:checked{
+            &+label{
+                &:before{
+                    @extend .fa-check-square-o;
+                    margin-left:2px;
+                    margin-right:2px;
+                }
+            }
+        }
+    }
+    textarea{
+        line-height:$lineHeight;
+        min-height:10em;
+    }
+    button, input[type=submit]{
+        background:$colorBgButton;
+        border:1px solid $colorBorderButton;
+        border-radius:$borderRadius;
+        padding:$gutter-width/2;
+        &:hover{
+            background:$colorBgButtonHover;
+        }
+    }
+}

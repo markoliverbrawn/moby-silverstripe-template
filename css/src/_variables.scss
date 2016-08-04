@@ -1,10 +1,16 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic); // Included here because to be near to the settings below
 
-$colorBackgroundButton:#ccc;
-$colorBackgroundButtonHover:lighten($colorBackgroundButton, 10%);
-$colorBackgroundHeader: #000;
+$borderRadius:3px;
+$colorBgButton:#337ab7;
+$colorBgButtonHover:lighten($colorBgButton, 10%);
+$colorBgHeader: #000;
 $colorBorder: #d0d0d0;
+$colorBorderButton: darken($colorBgButton, 10%);
 $colorBorderFieldset: $colorBorder;
 $colorFontHeader: #fff;
 
 $fontMain: 'Open Sans', sans-serif;
+
+$lineHeight: 1.5em;
+
+$fa-font-path: "/themes/moby/css/src/vendor/fa/fonts";
