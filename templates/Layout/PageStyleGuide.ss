@@ -20,6 +20,12 @@
                 <label for="f3_2">Checkbox checked</label>
             </div>
             <div>
+                <input id="f3_3" name="f3_3" type="radio"/>
+                <label for="f3_3">Option 1</label>
+                <input id="f3_4" name="f3_3" type="radio" checked="checked"/>
+                <label for="f3_4">Option 2</label>
+            </div>
+            <div>
                 <label for="f4">Select</label>
                 <select id="f4" placeholder="Text input">
                     <option value="1">Option 1</option>
