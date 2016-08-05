@@ -21,7 +21,6 @@ body{
     &>header{
         background:$colorBgHeader;
         color:$colorFontHeader;
-        padding:$gutter-width/2;
         *{
             color:$colorFontHeader;
         }
@@ -38,13 +37,29 @@ body{
                 padding:0;
                 li{
                     display:inline-block;
+                    &.current, &.section{
+                        a{
+                            background:#fff;
+                            color:#000;
+                        }
+                    }
+                    a{
+                        display:block;
+                        padding:$gutter-width/4 $gutter-width/2;
+                        text-decoration:none;
+                        &:hover{
+                            text-decoration: underline;
+                        }
+                    }
                 }
             }
         }
     }
     &>main{
         .wrapper{
+            padding:$gutter-width;
             @include bp('small') {
+                padding:0;
                 &>nav{
                     @include grid(1/5);
                 }

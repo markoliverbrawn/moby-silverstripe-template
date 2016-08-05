@@ -2131,9 +2131,14 @@ form button, form input[type=submit] {
   border: 1px solid #285f8f;
   border-radius: 3px;
   color: #fff;
-  display: inline-block;
+  display: block;
   line-height: 1.5em;
-  padding: 10px; }
+  padding: 10px;
+  width: 100%; }
+@media (min-width: 767px) {
+  form button, form input[type=submit] {
+    display: inline-block;
+    width: auto; } }
 form button:hover, form input[type=submit]:hover {
   background: #4f93ce; }
 form.cols-2 fieldset > div {
@@ -2162,8 +2167,7 @@ body > header:after, body > footer:after, body > main:after, body > footer:after
   clear: both; }
 body > header, body > footer {
   background: #000;
-  color: #fff;
-  padding: 10px; }
+  color: #fff; }
 body > header *, body > footer * {
   color: #fff; }
 body > header h1, body > footer h1 {
@@ -2176,7 +2180,20 @@ body > header nav ul, body > footer nav ul {
   padding: 0; }
 body > header nav ul li, body > footer nav ul li {
   display: inline-block; }
+body > header nav ul li.current a, body > footer nav ul li.current a, body > header nav ul li.section a, body > footer nav ul li.section a {
+  background: #fff;
+  color: #000; }
+body > header nav ul li a, body > footer nav ul li a {
+  display: block;
+  padding: 5px 10px;
+  text-decoration: none; }
+body > header nav ul li a:hover, body > footer nav ul li a:hover {
+  text-decoration: underline; }
+body > main .wrapper {
+  padding: 20px; }
 @media (min-width: 767px) {
+  body > main .wrapper {
+    padding: 0; }
   body > main .wrapper > nav {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;

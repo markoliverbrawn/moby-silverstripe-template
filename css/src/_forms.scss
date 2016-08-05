@@ -60,9 +60,14 @@ form{
         border:1px solid $colorBorderButton;
         border-radius:$borderRadius;
         color:$colorFontButton;
-        display:inline-block;
+        display:block;
         line-height:$lineHeight;
         padding:$gutter-width/2;
+        width:100%;        
+        @include bp('small') {
+            display:inline-block;
+            width:auto;
+        }
         &:hover{
             background:$colorBgButtonHover;
         }
