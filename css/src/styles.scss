@@ -66,6 +66,23 @@ body{
     }
 }
 
+blockquote{
+    &:before, &:after{
+        @extend .fa;
+        @extend .fa-2x;
+    }
+    &:before{
+        @extend .fa-quote-left;
+        float:left;
+        margin-right:$gutter-width/2;
+    }
+    &:after{
+        content:$fa-var-quote-right;
+        margin-left:$gutter-width/2;
+        position:absolute;
+    } 
+}
+
 .wrapper{
     margin:0 auto;
     max-width:1200px;

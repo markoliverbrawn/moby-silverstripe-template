@@ -59,9 +59,26 @@ form{
         background:$colorBgButton;
         border:1px solid $colorBorderButton;
         border-radius:$borderRadius;
+        color:$colorFontButton;
+        display:inline-block;
+        line-height:$lineHeight;
         padding:$gutter-width/2;
         &:hover{
             background:$colorBgButtonHover;
+        }
+    }
+    &.cols-2{
+        fieldset>div{
+            margin:0 0 $gutter-width 0;
+            width:49%;
+            &:nth-child(odd){
+                clear:left;
+                float:left;
+            }
+            &:nth-child(even){
+                clear:right;                
+                float:right;
+            }
         }
     }
 }
