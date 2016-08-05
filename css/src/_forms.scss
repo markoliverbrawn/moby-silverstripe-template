@@ -51,6 +51,15 @@ form{
             }
         }
     }
+    select{        
+        //-webkit-appearance: none;
+        //-moz-appearance: none;
+        //&:after{
+        //    @extend .fa;
+        //    @extend .fa-2x;
+        //    content: $fa-var-chevron-down;
+        //}
+    }
     textarea{
         line-height:$lineHeight;
         min-height:10em;
